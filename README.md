@@ -1,3 +1,3 @@
-# LSR-LCD
+# lpsr-lacd
 
 Under construction
