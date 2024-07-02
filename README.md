@@ -2,7 +2,7 @@
 
 We introduce a novel loss function, Layout and Character Oriented Focal Loss (LCOFL), which considers factors such as resolution, texture, and structural details, as well as the performance of the License Plate Recognition (LPR) task itself. We enhance character feature learning using deformable convolutions and shared weights in an attention module and employ a GAN-based training approach with an Optical Character Recognition (OCR) model as the discriminator to guide the super-resolution process. Our experimental results show significant improvements in character reconstruction quality, outperforming two state-of-the-art methods in both quantitative and qualitative measures.
 
-<img src="./media/results-qualitative.jpg" width="600"/>
+<img src="./media/results-qualitative.jpg" width="550"/>
 
 # LR-HR pairs generated from RodoSol-ALPR
 
@@ -11,7 +11,8 @@ The **High-Resolution (HR)** images used in our experiments were generated as fo
 We generated **Low-Resolution (LR)** versions of each HR image by simulating the effects of an optical system with lower resolution. This was achieved by iteratively applying random Gaussian noise to each HR image until we reached the desired degradation level for a given LR image (i.e., SSIM < 0.1). We padded the LR and HR images to maintain the aspect ratio before resizing.
 
 Here are some HR-LR image pairs created:
-<img src="./media/samples-rodosol.png" width="600"/>
+
+<img src="./media/samples-rodosol.png" width="450"/>
 
 ### How to obtain the RodoSol-SR dataset
 
