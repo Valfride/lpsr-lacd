@@ -11,7 +11,7 @@ Here are some HR-LR image pairs created from the [RodoSol-ALPR](https://github.c
 
 ### How to obtain the RodoSol-SR dataset
 
-As we are not the creators of the [RodoSol-ALPR](https://github.com/raysonlaroca/rodosol-alpr-dataset) dataset, we have decided to grant access to the images we have generated from these datasets upon request, subject to the signing of a licensing agreement. In essence, the RodoSol-SR dataset is released for academic research only and is free to researchers from educational or research institutes for **non-commercial purposes**.
+As we are not the creators of the [RodoSol-ALPR](https://github.com/raysonlaroca/rodosol-alpr-dataset) dataset, we have decided to grant access to the images we have generated from this dataset upon request, subject to the signing of a licensing agreement. In essence, the RodoSol-SR dataset is released for academic research only and is free to researchers from educational or research institutes for **non-commercial purposes**.
 
 To be able to download the dataset, please read [**this license agreement**](./Media/license-agreement.pdf) carefully, fill it out and send it back to the second author ([rblsantos@inf.ufpr.br](mailto:rblsantos@inf.ufpr.br)) (who also manages access to the [RodoSol-ALPR](https://github.com/raysonlaroca/rodosol-alpr-dataset) dataset). **Your e-mail must be sent from a valid university account** (.edu, .ac or similar).
 
