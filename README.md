@@ -30,7 +30,7 @@ In general, you will receive a download link within 3-5 business days. Failure t
 
 # Citation
 
-If you use our code or datasets in your research, please cite:
+If you use our code in your research, please cite:
 * V. Nascimento, R. Laroca, R. O. Ribeiro, W. R. Schwartz, D. Menotti, “Enhancing License Plate Super-Resolution: A Layout-Aware and Character-Driven Approach,” in Conference on Graphics, Patterns and Images (SIBGRAPI), pp. 1-8, Sept. 2024.
 
 ```
