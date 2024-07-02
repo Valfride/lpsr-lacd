@@ -47,7 +47,7 @@ If you use our code in your research, please cite:
 }
 ```
 
-You may also be interested in our [previous work](https://github.com/valfride/lpr-rsr-ext/):
+You may also be interested in our [previous work](https://github.com/valfride/lpr-rsr-ext/). If you use the LR-HR image pairs we created for our experiments, please cite it:
 * V. Nascimento, R. Laroca, J. A. Lambert, W. R. Schwartz, D. Menotti, “Super-Resolution of License Plate Images Using Attention Modules and Sub-Pixel Convolution Layers,” in *Computers & Graphics*, vol. 113, pp. 69-76, 2023. [[Science Direct]](https://doi.org/10.1016/j.cag.2023.05.005) [[arXiv]](https://arxiv.org/abs/2305.17313)
 
 ## Related publications
