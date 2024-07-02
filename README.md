@@ -1,6 +1,6 @@
 # Enhancing License Plate Super-Resolution: A Layout-Aware and Character-Driven Approach
 
-We introduce a novel loss function, Layout and Character Oriented Focal Loss (LCOFL), which considers factors such as resolution, texture, and structural details, as well as the performance of the License Plate Recognition (LPR) task itself. We enhance character feature learning using deformable convolutions and shared weights in an attention module and employ a GAN-based training approach with an Optical Character Recognition (OCR) model as the discriminator to guide the super-resolution process. Our experimental results show significant improvements in character reconstruction quality, outperforming two state-of-the-art methods in both quantitative and qualitative measures.
+We introduce a novel loss function, Layout and Character Oriented Focal Loss (LCOFL), which considers factors such as resolution, texture, and structural details, as well as the performance of the License Plate Recognition (LPR) task itself. We enhance character feature learning using deformable convolutions and shared weights in an attention module and employ a GAN-based training approach with an Optical Character Recognition (OCR) model as the discriminator to guide the super-resolution process. Our results show significant improvements in character reconstruction quality, outperforming two state-of-the-art methods in both quantitative and qualitative measures.
 
 <img src="./media/results-qualitative.jpg" width="550"/>
 
