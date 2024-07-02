@@ -8,7 +8,7 @@ We introduce a novel loss function, Layout and Character Oriented Focal Loss (LC
 
 The **High-Resolution (HR)** images used in our experiments were generated as follows. For each image from the [RodoSol-ALPR](https://github.com/raysonlaroca/rodosol-alpr-dataset) dataset, we first cropped the License Plate (LP) region using the annotations provided by the creators of the dataset. We then used the same annotations to rectify each LP image, making it more horizontal, tightly bounded, and easier to recognize. The rectified images serve as the HR images.
 
-We generated **Low-Resolution (LR)** versions of each HR image by simulating the effects of an optical system with lower resolution. This was achieved by iteratively applying random Gaussian noise to each HR image until we reached the desired degradation level for a given LR image (i.e., SSIM < 0.1). We padded the LR and HR images to maintain the aspect ratio before resizing.
+We generated **Low-Resolution (LR)** versions of each HR image by simulating the effects of an optical system with lower resolution. This was achieved by iteratively applying random Gaussian noise to each HR image until we reached the desired degradation level for a given LR image (i.e., SSIM < 0.1). We padded the LR and HR images to maintain the aspect ratio before resizing. This process was described in our [previous work](https://github.com/valfride/lpr-rsr-ext/).
 
 Here are some HR-LR image pairs created:
 
@@ -16,9 +16,9 @@ Here are some HR-LR image pairs created:
 
 ### How to obtain the RodoSol-SR dataset
 
-As we are not the creators of the [RodoSol-ALPR](https://github.com/raysonlaroca/rodosol-alpr-dataset) dataset, we have decided to grant access to the images we have generated from this dataset upon request, subject to the signing of a licensing agreement. In essence, the RodoSol-SR dataset is released for academic research only and is free to researchers from educational or research institutes for **non-commercial purposes**.
+The RodoSol-SR dataset is released for academic research only and is free to researchers from educational or research institutes for **non-commercial purposes**.
 
-To be able to download the dataset, please read [**this license agreement**](./Media/license-agreement.pdf) carefully, fill it out and send it back to the second author ([rblsantos@inf.ufpr.br](mailto:rblsantos@inf.ufpr.br)) (who also manages access to the [RodoSol-ALPR](https://github.com/raysonlaroca/rodosol-alpr-dataset) dataset). **Your e-mail must be sent from a valid university account** (.edu, .ac or similar).
+To be able to download the dataset, please read [**this license agreement**](./media/license-agreement.pdf) carefully, fill it out and send it back to the second author ([rblsantos@inf.ufpr.br](mailto:rblsantos@inf.ufpr.br)) (who also manages access to the [RodoSol-ALPR](https://github.com/raysonlaroca/rodosol-alpr-dataset) dataset). **Your e-mail must be sent from a valid university account** (.edu, .ac or similar).
 
 In general, you will receive a download link within 3-5 business days. Failure to follow the instructions may result in no response.
 
