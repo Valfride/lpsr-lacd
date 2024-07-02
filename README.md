@@ -4,7 +4,7 @@ We introduce a novel loss function, Layout and Character Oriented Focal Loss (LC
 
 # LR-HR pairs generated from RodoSol-ALPR
 
-The **High-Resolution (HR)** images used in our experiments were generated as follows. For each image from the [RodoSol-ALPR](https://github.com/raysonlaroca/rodosol-alpr-dataset), we first cropped the LP region using the annotations provided by the authors. We then used the same annotations to rectify each LP image, making it more horizontal, tightly bounded, and easier to recognize. The rectified image serves as the HR image.
+The **High-Resolution (HR)** images used in our experiments were generated as follows. For each image from the [RodoSol-ALPR](https://github.com/raysonlaroca/rodosol-alpr-dataset), we first cropped the LP region using the annotations provided by the authors. We then used the same annotations to rectify each LP image, making it more horizontal, tightly bounded, and easier to recognize. The rectified images serve as the HR images.
 
 We generated **Low-Resolution (LR)** versions of each HR image by simulating the effects of an optical system with lower resolution. This was achieved by iteratively applying random Gaussian noise to each HR image until we reached the desired degradation level for a given LR image (i.e., SSIM < 0.1). We padded the LR and HR images to maintain the aspect ratio before resizing.
 
