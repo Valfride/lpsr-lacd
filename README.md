@@ -9,7 +9,7 @@ The **High-Resolution (HR)** images used in our experiments were generated as fo
 We generated **Low-Resolution (LR)** versions of each HR image by simulating the effects of an optical system with lower resolution. This was achieved by iteratively applying random Gaussian noise to each HR image until we reached the desired degradation level for a given LR image (i.e., SSIM < 0.1). We padded the LR and HR images to maintain the aspect ratio before resizing.
 
 Here are some HR-LR image pairs created:
-<img src="./Media/image2.png" width="600"/>
+<img src="./Media/samples-rodosol.png" width="600"/>
 
 ### How to obtain the RodoSol-SR dataset
 
