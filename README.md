@@ -1,4 +1,4 @@
-# Enhancing Lincense Plate Super-Resolution: A Layout-Aware and Character-Driven Approach
+# Enhancing License Plate Super-Resolution: A Layout-Aware and Character-Driven Approach
 
 # LR-HR pairs generated from RodoSol-ALPR
 
