@@ -9,7 +9,7 @@ We generated **Low-Resolution (LR)** versions of each HR image by simulating the
 Here are some HR-LR image pairs created from the [RodoSol-ALPR](https://github.com/raysonlaroca/rodosol-alpr-dataset) dataset:
 <img src="./Media/image2.png" width="600"/>
 
-### How to obtain the RodoSol-SR and PKU-SR datasets
+### How to obtain the RodoSol-SR dataset
 
 As we are not the creators of the [RodoSol-ALPR](https://github.com/raysonlaroca/rodosol-alpr-dataset) dataset, we have decided to grant access to the images we have generated from these datasets upon request, subject to the signing of a licensing agreement. In essence, the RodoSol-SR dataset is released for academic research only and is free to researchers from educational or research institutes for **non-commercial purposes**.
 
