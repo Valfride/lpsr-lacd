@@ -24,6 +24,8 @@ In general, you will receive a download link within 3-5 business days. Failure t
 
 # Usage
 
+This section provides instructions on how to test the model, train it from scratch, and fine-tune it on a custom dataset. Follow the steps below to set up and run the model.
+
 ## Testing
 To test the model, ensure that the [config file](configs/cgnetV2_deformable_test.yaml) specifies the path to the .pth file, as shown in the example below:
 ```yaml
@@ -51,21 +53,21 @@ python3 ParallelNetTrain.py --config ./config/Sibgrapi_ablation/cgnetV2_deformab
 ```
 
 ## Training On Custom Fataset
-To train/FineTune the model on a custom dataset, ensure that a .txt file with the path to the cropped and rectified images is provided formated as the example bellow:
+To train or fine-tune the model on a custom dataset, ensure that a .txt file containing the paths to the cropped and rectified images is formatted as shown below:
 ```txt
 path/to/HR1_images.jpg;path/to/LR1_images.jpg;training
 path/to/HR2_images.jpg;path/to/LR2_images.jpg;validation
 path/to/HR3_images.jpg;path/to/LR3_images.jpg;testing
 ```
 
-Also, modify the [config file](configs/cgnetV2_deformable.yaml) to include the path to the .txt within the text:
+Then, modify the [config file](configs/cgnetV2_deformable.yaml) to include the path to the .txt file:
 
 ```yaml
 train_dataset:
   dataset:
     name: parallel_training
     args:
-      path_split: ./path/to/sample.txt
+      path_split: ./path/to/file.txt
       phase: training
       
   wrapper:
@@ -82,7 +84,7 @@ val_dataset:
   dataset:
     name: parallel_training
     args:
-      path_split: ./path/to/sample.txt
+      path_split: ./path/to/file.txt
       phase: validation
 
   wrapper:
