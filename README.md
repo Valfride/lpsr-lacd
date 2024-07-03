@@ -27,13 +27,13 @@ In general, you will receive a download link within 3-5 business days. Failure t
 ## Testing
 
 ```
-python3 test.py --config ./config/Sibgrapi_ablation/cgnetV2_deformable_ssimLoss_noPL_newLRS_augHRLR_crossEntropy_loss_test_CM_PKU_test.yaml --save True 
+python3 test.py --config ./config/Sibgrapi_ablation/cgnetV2_deformable.yaml --save True 
 ```
 
 ## Training From Scratch
 
 ```
-python3 ParallelNetTrain.py --config ./config/Sibgrapi_ablation/cgnetV2_deformable_ssimLoss_noPL_newLRS_augHRLR_crossEntropy_loss_test_CM_PKU_test.yaml --save True 
+python3 ParallelNetTrain.py --config ./config/Sibgrapi_ablation/cgnetV2_deformable_test.yaml --save True
 ```
 
 # Citation
