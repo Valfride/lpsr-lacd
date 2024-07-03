@@ -31,7 +31,12 @@ python3 test.py --config ./config/Sibgrapi_ablation/cgnetV2_deformable.yaml --sa
 ```
 
 ## Training From Scratch
+For training from scratch comment the lines in [configs](configs/cgnetV2_deformable.yaml) file concerning the varible resume and make the the variable LOAD_PRE_TRAINED_OCR=null as in the example bellow:
+```yaml
+LOAD_PRE_TRAINED_OCR: null
 
+```
+resume:
 ```
 python3 ParallelNetTrain.py --config ./config/Sibgrapi_ablation/cgnetV2_deformable_test.yaml --save True
 ```
