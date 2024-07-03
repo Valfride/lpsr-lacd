@@ -15,9 +15,6 @@ from torch.optim.lr_scheduler import StepLR
 
 #Set gpu visibility, for debbug purposes
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
-# os.environ["CUDA_LAUNCH_BLOCKING"] = "1"
-
 
 # Enable anomaly detection in PyTorch autograd. Anomaly detection helps in finding operations that
 # are not supported by autograd and can be useful for debugging. It is often used during development
@@ -48,9 +45,6 @@ def make_dataloader(spec, tag=''):
         collate_fn=dataset.collate_fn # A function used to collate (combine) individual samples into batches
     )
 
-    # """Next is only for debugging purpose"""
-    # for batch in loader:
-    #     a=0
     # Return the DataLoader        
     return loader 
 
@@ -165,13 +159,6 @@ def main(config_, save_path):
     # Create the loss function for training    
     ocr_loss_fn = losses.make(config['loss_ocr'])
     sr_loss_fn = losses.make(config['loss_sr'])
-    # Get the number of available GPUs
-    n_gpus = torch.cuda.device_count()
-    print(n_gpus)
-    
-    # If multiple GPUs are available, use DataParallel to parallelize model training
-    # if n_gpus > 1:
-    #     model = nn.parallel.DataParallel(model)
         
     # Get maximum number of epochs and epoch save interval from configuration
     epoch_max = config['epoch_max']
