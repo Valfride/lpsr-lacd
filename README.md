@@ -50,7 +50,7 @@ Then, execute the following command:
 python3 ParallelNetTrain.py --config ./config/Sibgrapi_ablation/cgnetV2_deformable_test.yaml --save True
 ```
 
-##Training On Custom Fataset
+## Training On Custom Fataset
 To train/FineTune the model on a custom dataset, ensure that a .txt file with the path to the cropped and rectified images is provided formated as the example bellow:
 ´´´txt
 path/to/HR1_images.jpg;path/to/LR1_images.jpg;training
