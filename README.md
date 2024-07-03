@@ -25,13 +25,22 @@ In general, you will receive a download link within 3-5 business days. Failure t
 # Usage
 
 ## Testing
-
+For testing the [config file](configs/cgnetV2_deformable_test.yaml) file must have the path to the .pth as in the example bellow:
+```yaml
+model:
+  name: cgnetV2_deformable
+  load: ./save/_cgnetV2_deformable_test/best_model_cgnetV2_deformable_Epoch_82.pth
+  args:
+    in_channels: 3
+    out_channels: 3
+```
+Then run the following command line:
 ```
 python3 test.py --config ./config/Sibgrapi_ablation/cgnetV2_deformable.yaml --save True 
 ```
 
 ## Training From Scratch
-For training from scratch make the following variables in [configs](configs/cgnetV2_deformable.yaml) equal to null as in the example bellow:
+For training from scratch make the following variables in [config file](configs/cgnetV2_deformable.yaml) equal to null as in the example bellow:
 ```yaml
 LOAD_PRE_TRAINED_OCR: null
 resume: null
