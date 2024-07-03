@@ -24,7 +24,7 @@ In general, you will receive a download link within 3-5 business days. Failure t
 
 # Usage
 
-This section provides instructions on how to test the model, train it from scratch, and fine-tune it on a custom dataset. Follow the steps below to set up and run the model.
+This section provides instructions on testing the model, training it from scratch, and fine-tuning it on a custom dataset. Follow the steps below to set up and run the model. Additionally, the Optical Character Reader (OCR) used in this work for training was sourced from [GP_LPR](https://github.com/MMM2024/GP_LPR) by Liu et al.
 
 ## Testing
 To test the model, ensure that the [config file](configs/cgnetV2_deformable_test.yaml) specifies the path to the .pth file, as shown in the example below:
