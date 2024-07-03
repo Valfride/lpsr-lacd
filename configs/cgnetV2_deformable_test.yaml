@@ -1,0 +1,30 @@
+model:
+  name: cgnetV2_deformable
+  load: ./save/_cgnetV2_deformable_test/best_model_cgnetV2_deformable_Epoch_82.pth
+  args:
+    in_channels: 3
+    out_channels: 3
+
+model_ocr:
+  name: ocr
+  args:
+    load: ./models_ocr_pre_trained/RodoSol-SR
+
+test_dataset:
+  dataset:
+    name: parallel_training
+    args:
+      path_split: ./split_all_rodosol.txt
+      phase: testing
+
+  wrapper:
+    name: parallel_images_lp
+    args:
+      imgW: 48
+      imgH: 16
+      aug: False
+      image_aspect_ratio: 3
+      background: (0.5, 0.5, 0.5)
+      test: True
+  batch: 2
+
