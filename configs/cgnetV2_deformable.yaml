@@ -1,0 +1,100 @@
+MODEL_OCR:
+  name: GPLPR
+  OCR_TRAIN: True
+  args:
+    alphabet: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    nc: 3
+    K: 7
+    isSeqModel: True
+    head: 2
+    inner: 256
+    isl2Norm: True
+    
+optimizer_ocr:
+  name: adam
+  args: 
+    lr: 1.e-4
+    
+LOAD_PRE_TRAINED_OCR: null #./save/_cgnetV2_deformable_test/best_model_GPLPR_Epoch_82.pth
+MODEL_SR:
+  name: cgnetV2_deformable
+  args:
+    in_channels: 3
+    out_channels: 3
+
+optimizer_sr:
+  name: adam
+  args: 
+    lr: 1.e-4
+    betas: [0.5, 0.555]
+
+early_stopper:
+  patience: 50
+  min_delta: 0
+  counter: 0
+
+CM: True
+func_train: PARALLEL_TRAINING
+func_val: PARALLEL_VALIDATION
+alphabet: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+tag_view: view
+
+train_dataset:
+  dataset:
+    name: parallel_training
+    args:
+      path_split: ./split_all_rodosol.txt
+      phase: training
+      
+  wrapper:
+    name: parallel_images_lp
+    args:
+      imgW: 48
+      imgH: 16
+      aug: True
+      image_aspect_ratio: 3
+      background: (127, 127, 127)
+  batch: 2
+
+val_dataset:
+  dataset:
+    name: parallel_training
+    args:
+      path_split: ./split_all_rodosol.txt
+      phase: validation
+
+  wrapper:
+    name: parallel_images_lp
+    args:
+      imgW: 48
+      imgH: 16
+      aug: False
+      image_aspect_ratio: 3
+      background: (127, 127, 127)
+  batch: 2
+
+epoch_max: 3000
+
+loss_ocr:
+  name: CrossEntropyLoss
+  args:
+    size_average: None
+    reduce: None
+    reduction: mean
+
+loss_sr: 
+  name: OCR_perceptual_loss
+  args:
+    alphabet: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+    load: ./models_ocr_pre_trained/RodoSol-SR
+    loss_weight: 0.75
+    loss_specs:
+      name: ssim_loss
+      args:
+        window_size: 5
+
+epoch_max: 3000
+epoch_save: 100
+resume:
+  - ./save/_cgnetV2_deformable_test/best_model_cgnetV2_deformable_Epoch_82.pth
+  - ./save/_cgnetV2_deformable_test/best_model_GPLPR_Epoch_82.pth
