@@ -25,7 +25,7 @@ In general, you will receive a download link within 3-5 business days. Failure t
 # Usage
 
 ## Testing
-To test the model, ensure that the config file specifies the path to the .pth file, as shown in the example below:
+To test the model, ensure that the [config file](configs/cgnetV2_deformable_test.yaml) specifies the path to the .pth file, as shown in the example below:
 ```yaml
 model:
   name: cgnetV2_deformable
@@ -40,7 +40,7 @@ python3 test.py --config ./config/Sibgrapi_ablation/cgnetV2_deformable.yaml --sa
 ```
 
 ## Training From Scratch
-To train the model from scratch, set the following variables in the config file to null, as shown below:
+To train the model from scratch, set the following variables in the [config file](configs/cgnetV2_deformable.yaml) to null, as shown below:
 ```yaml
 LOAD_PRE_TRAINED_OCR: null
 resume: null
@@ -48,6 +48,52 @@ resume: null
 Then, execute the following command:
 ```
 python3 ParallelNetTrain.py --config ./config/Sibgrapi_ablation/cgnetV2_deformable_test.yaml --save True
+```
+
+##Training On Custom Fataset
+To train/FineTune the model on a custom dataset, ensure that a .txt file with the path to the cropped and rectified images is provided formated as the example bellow:
+´´´txt
+path/to/HR1_images.jpg;path/to/LR1_images.jpg;training
+path/to/HR2_images.jpg;path/to/LR2_images.jpg;validation
+path/to/HR3_images.jpg;path/to/LR3_images.jpg;testing
+´´´
+
+Also, modify the [config file](configs/cgnetV2_deformable.yaml) to include the path to the .txt within the text:
+
+```yaml
+train_dataset:
+  dataset:
+    name: parallel_training
+    args:
+      path_split: ./path/to/sample.txt
+      phase: training
+      
+  wrapper:
+    name: parallel_images_lp
+    args:
+      imgW: 48
+      imgH: 16
+      aug: True
+      image_aspect_ratio: 3
+      background: (127, 127, 127)
+  batch: 2
+
+val_dataset:
+  dataset:
+    name: parallel_training
+    args:
+      path_split: ./path/to/sample.txt
+      phase: validation
+
+  wrapper:
+    name: parallel_images_lp
+    args:
+      imgW: 48
+      imgH: 16
+      aug: False
+      image_aspect_ratio: 3
+      background: (127, 127, 127)
+  batch: 2
 ```
 
 # Citation
