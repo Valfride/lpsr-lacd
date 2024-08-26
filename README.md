@@ -113,7 +113,7 @@ If you use our code in your research, please cite:
   number = {},
   pages = {1-6},
   doi = {},
-  issn = {},
+  issn = {1530-1834},
 }
 ```
 
