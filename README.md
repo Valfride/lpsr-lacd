@@ -101,7 +101,7 @@ val_dataset:
 # Citation
 
 If you use our code in your research, please cite:
-* V. Nascimento, R. Laroca, R. O. Ribeiro, W. R. Schwartz, D. Menotti, “Enhancing License Plate Super-Resolution: A Layout-Aware and Character-Driven Approach,” in Conference on Graphics, Patterns and Images (SIBGRAPI), pp. 1-8, Sept. 2024.
+* V. Nascimento, R. Laroca, R. O. Ribeiro, W. R. Schwartz, D. Menotti, “Enhancing License Plate Super-Resolution: A Layout-Aware and Character-Driven Approach,” in Conference on Graphics, Patterns and Images (SIBGRAPI), pp. 1-6, Sept. 2024.
 
 ```
 @article{nascimento2024enhancing,
@@ -111,7 +111,7 @@ If you use our code in your research, please cite:
   journal = {Conference on Graphics, Patterns and Images (SIBGRAPI)},
   volume = {},
   number = {},
-  pages = {1-8},
+  pages = {1-6},
   doi = {},
   issn = {},
 }
@@ -122,7 +122,7 @@ You may also be interested in our [previous work](https://github.com/valfride/lp
 
 ## Related publications
 
-A list of all our papers on ALPR can be seen [here](https://scholar.google.com/scholar?hl=pt-BR&as_sdt=0%2C5&as_ylo=2018&q=allintitle%3A+plate+OR+license+OR+vehicle+author%3A%22David+Menotti%22&btnG=).
+A list of all our papers on vehicle identification can be seen [here](https://scholar.google.com/scholar?hl=pt-BR&as_sdt=0%2C5&as_ylo=2018&q=allintitle%3A+plate+OR+license+OR+vehicle+author%3A%22David+Menotti%22&btnG=).
 
 ## Contact
 
