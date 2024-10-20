@@ -101,7 +101,7 @@ val_dataset:
 # Citation
 
 If you use our code in your research, please cite:
-* V. Nascimento, R. Laroca, R. O. Ribeiro, W. R. Schwartz, D. Menotti, “Enhancing License Plate Super-Resolution: A Layout-Aware and Character-Driven Approach,” in *Conference on Graphics, Patterns and Images (SIBGRAPI)*, pp. 1-6, Sept. 2024. [[arXiv]](https://arxiv.org/abs/2408.15103)
+* V. Nascimento, R. Laroca, R. O. Ribeiro, W. R. Schwartz, D. Menotti, “Enhancing License Plate Super-Resolution: A Layout-Aware and Character-Driven Approach,” in *Conference on Graphics, Patterns and Images (SIBGRAPI)*, pp. 1-6, Sept. 2024. [[IEEE Xplore]](https://doi.org/10.1109/SIBGRAPI62404.2024.10716303) [[arXiv]](https://arxiv.org/abs/2408.15103)
 
 ```
 @article{nascimento2024enhancing,
@@ -112,7 +112,7 @@ If you use our code in your research, please cite:
   volume = {},
   number = {},
   pages = {1-6},
-  doi = {},
+  doi = {10.1109/SIBGRAPI62404.2024.10716303},
   issn = {1530-1834},
 }
 ```
